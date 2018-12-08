@@ -1,0 +1,24 @@
+{
+  "name": "StoreFront_mySQL_Node.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kallistahalim/StoreFront_mySQL_Node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kallistahalim/StoreFront_mySQL_Node.js/issues"
+  },
+  "homepage": "https://github.com/kallistahalim/StoreFront_mySQL_Node.js#readme"
+}
