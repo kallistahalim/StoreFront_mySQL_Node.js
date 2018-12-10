@@ -55,7 +55,8 @@ function afterConnection() {
 
                                 if (checkStoreQua < answerUnits) {
                                     console.log("------------------------");
-                                    console.log('Insufficient quantity!')
+                                    console.log('Insufficient quantity!');
+                                    console.log("------------------------");
                                 } else {
                                     checkStoreQua = checkStoreQua - answerUnits;
                                     console.log("------------------------");

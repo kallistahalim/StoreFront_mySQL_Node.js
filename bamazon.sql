@@ -15,7 +15,7 @@ CREATE TABLE products (
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUE ("apple", "fruits & vegetables", 1, 1000),
-("chocolate bar", "snack", 2.5, 1500),
+("chocolate bar", "snack", 2.5, 500),
 ("pie", "dessert", 2, 500),
 ("kale", "fruits & vegetables", 0.5, 2000),
 ("iPhoneX", "electronic", 999, 500),
