@@ -44,8 +44,9 @@ function afterConnection() {
                             console.log("------------------------");
                             console.log("Product Requested: " + productName);
                             
-
-                            if (answerID = checkID) {
+                            console.log(typeof answerID,typeof checkID);
+                            if (answerID == checkID) {
+                                console.log("I happened")
                                 console.log("------------------------");
                                 console.log("In-stock quantity: " + res[(answer.ID) - 1].stock_quantity);
                                 console.log("------------------------");
@@ -73,23 +74,24 @@ function afterConnection() {
 
 
 
-                                    // var sql = `UPDATE products
-                                    //             SET stock_quantity=?
-                                    //             WHERE item_id=?`;
-                                    // var data = [parseInt(checkStoreQua), parseInt(answer.ID)];
-                                    // console.log(data);
+                                    var sql = `UPDATE products
+                                                SET stock_quantity=?
+                                                WHERE item_id=?`;
+                                    var data = [parseInt(checkStoreQua), parseInt(answer.ID)];
+                                    console.log(data);
 
     
-                                    // connection.query(sql, data, function (err, res) {
-                                    //     console.log(res);
-                                    //   if (err) {
-                                    //       console.log("error!")
-                                    //   }
+                                    connection.query(sql, data, function (err, res) {
+                                        console.log(res);
+                                      if (err) {
+                                          console.log("error!", err)
+                                      }
                                       
-                                    //   else{
-                                    //   console.log(res.affectedRows + " record(s) updated");
-                                    //   }
-                                //   });
+                                      else{
+                                      console.log(res.affectedRows + " record(s) updated");
+                                      connection.end();
+                                      }
+                                  });
                                     }
 
                                 }
@@ -99,6 +101,9 @@ function afterConnection() {
 
                     };
 
-                    connection.end();
+                   
                 });
             };
+
+
+       

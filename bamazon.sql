@@ -10,7 +10,15 @@ CREATE TABLE products (
     department_name VARCHAR(30),
     price DECIMAL(30,2),
     stock_quantity INT(30),
+    product_sales INT(30),
     PRIMARY KEY (item_id)
+);
+
+CREATE TABLE department (
+    department_id INT NOT NULL AUTO_INCREMENT,
+    department_name VARCHAR(30),
+    over_head_costs DECIMAL(30,2),
+    PRIMARY KEY (department_id)
 );
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
